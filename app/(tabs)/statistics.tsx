@@ -1,10 +1,11 @@
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import ScreenWrapper from "@/components/ScreenWrapper";
 
 const Statistics = () => {
   return (
-    <View>
+    <ScreenWrapper>
       <Text>Statistics</Text>
-    </View>
+    </ScreenWrapper>
   );
 };
 

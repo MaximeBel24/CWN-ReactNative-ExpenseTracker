@@ -1,10 +1,11 @@
 import { Text, View } from "react-native";
+import ScreenWrapper from "@/components/ScreenWrapper";
 
 const Wallet = () => {
   return (
-    <View>
+    <ScreenWrapper>
       <Text>Wallet</Text>
-    </View>
+    </ScreenWrapper>
   );
 };
 
