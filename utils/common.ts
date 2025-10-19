@@ -17,29 +17,15 @@ export const getLast7Days = () => {
 };
 
 export const getLast12Months = () => {
-  const monthsOfYear = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
   const result = [];
 
   for (let i = 11; i >= 0; i--) {
     const date = new Date();
     date.setMonth(date.getMonth() - i);
 
-    const monthName = monthsOfYear[date.getMonth()];
+    const monthName = date.toLocaleString("default", { month: "short" });
     const shortYear = date.getFullYear().toString().slice(-2);
-    const formattedMonthYear = `${monthName} ${shortYear}`; // Jan 24, Feb 25
+    const formattedMonthYear = `${monthName} ${shortYear}`;
     const formattedDate = date.toISOString().split("T")[0];
 
     result.push({
@@ -50,7 +36,6 @@ export const getLast12Months = () => {
     });
   }
 
-  // return result;
   return result.reverse();
 };
 
